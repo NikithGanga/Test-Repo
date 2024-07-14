@@ -23,8 +23,8 @@ pipeline {
             steps {
                 sh '''
                 echo "Deploy stage"
-                mkdir -p /var/www/html
-                cp -r * /var/www/html/
+                mkdir -p ${WORKSPACE}/html
+                cp -r * ${WORKSPACE}/html/
                 '''
             }
         }
