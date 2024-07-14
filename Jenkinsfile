@@ -24,7 +24,7 @@ pipeline {
                 sh '''
                 echo "Deploy stage"
                 mkdir -p ${WORKSPACE}/html
-                cp -r * ${WORKSPACE}/html/
+                rsync -av --exclude=html . ${WORKSPACE}/html/
                 '''
             }
         }
