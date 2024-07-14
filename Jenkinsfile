@@ -24,7 +24,7 @@ pipeline {
                 sh '''
                 echo "Deploy stage"
                 mkdir -p ${WORKSPACE}/html
-                find . -maxdepth 1 ! -name html ! -name . -exec cp -r {} ${WORKSPACE}/html/ \;
+                find . -maxdepth 1 ! -name html ! -name . -exec cp -r {} ${WORKSPACE}/html/ \\;
                 '''
             }
         }
